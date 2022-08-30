@@ -14,6 +14,7 @@
 		E8D9DCAA28B8E8A60035D5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D9DCA928B8E8A60035D5A5 /* Assets.xcassets */; };
 		E8D9DCAD28B8E8A60035D5A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D9DCAB28B8E8A60035D5A5 /* LaunchScreen.storyboard */; };
 		E8D9DCB528B8ECA10035D5A5 /* ExpanseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9DCB428B8ECA10035D5A5 /* ExpanseTableViewCell.swift */; };
+		E8E4055C28BCE95800FADB55 /* ExtractDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E4055B28BCE95800FADB55 /* ExtractDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E8D9DCAC28B8E8A60035D5A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8D9DCAE28B8E8A60035D5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D9DCB428B8ECA10035D5A5 /* ExpanseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpanseTableViewCell.swift; sourceTree = "<group>"; };
+		E8E4055B28BCE95800FADB55 /* ExtractDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E8D9DCA928B8E8A60035D5A5 /* Assets.xcassets */,
 				E8D9DCAB28B8E8A60035D5A5 /* LaunchScreen.storyboard */,
 				E8D9DCAE28B8E8A60035D5A5 /* Info.plist */,
+				E8E4055B28BCE95800FADB55 /* ExtractDetailsViewController.swift */,
 			);
 			path = Expanses;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				E8D9DCB528B8ECA10035D5A5 /* ExpanseTableViewCell.swift in Sources */,
 				E8D9DCA528B8E8A40035D5A5 /* ViewController.swift in Sources */,
+				E8E4055C28BCE95800FADB55 /* ExtractDetailsViewController.swift in Sources */,
 				E8D9DCA128B8E8A40035D5A5 /* AppDelegate.swift in Sources */,
 				E8D9DCA328B8E8A40035D5A5 /* SceneDelegate.swift in Sources */,
 			);
