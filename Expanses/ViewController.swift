@@ -32,11 +32,13 @@ extension ExpanseListViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let month = self.months[indexPath.row]
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: ExpanseTableViewCell.identifier) as? ExpanseTableViewCell {
-            cell.configure(with: month)
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpanseTableViewCell.identifier) as? ExpanseTableViewCell else {
+            return UITableViewCell()
         }
-        return UITableViewCell()
+        
+        cell.configure(with: month)
+        
+        return cell
     }
     
 }
