@@ -28,7 +28,7 @@ extension ExpanseListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let extractDetailsViewController = storyboard.instantiateViewController(withIdentifier: ExtractDetailsViewController.identifier)
+        let extractDetailsViewController = storyboard.instantiateViewController(withIdentifier: ExtractDetailViewController.identifier)
         
         extractDetailsViewController.title = self.months[indexPath.row]
         
