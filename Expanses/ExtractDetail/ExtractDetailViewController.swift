@@ -13,7 +13,7 @@ class ExtractDetailViewController: UIViewController {
     
     private let extractItems = [
         ExtractItem(title: "Lunch", value: 13.00, date: Date.now),
-        ExtractItem(title: "ELD Store", value: 3.54, date: Date.now)
+        ExtractItem(title: "ELD Store", value: -3.54, date: Date.now)
     ]
     
     @IBOutlet weak var totalValue: UILabel!
@@ -39,9 +39,11 @@ extension ExtractDetailViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let extractItem = self.extractItems[indexPath.row]
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExtractTableViewCell") else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExtractTableViewCell") as? ExtractItemTableViewCell else {
             return UITableViewCell()
         }
+        
+        cell.configure(with: extractItem)
         
         return cell
     }
