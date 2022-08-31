@@ -23,10 +23,22 @@ class ExtractDetailViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(self.openAddExtractItemModal))
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.tableHeaderView = nil
+    }
+    
+    @objc
+    private func openAddExtractItemModal() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let addExtractItemViewController = storyboard.instantiateViewController(withIdentifier: AddExtractItemViewController.identifier)
+        
+        addExtractItemViewController.modalPresentationStyle = .pageSheet
+        addExtractItemViewController.modalTransitionStyle = .coverVertical
+        
+        present(addExtractItemViewController, animated: true, completion: nil)
     }
 }
 

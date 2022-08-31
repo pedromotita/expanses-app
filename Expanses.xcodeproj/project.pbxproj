@@ -17,6 +17,7 @@
 		E8D9DCAD28B8E8A60035D5A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D9DCAB28B8E8A60035D5A5 /* LaunchScreen.storyboard */; };
 		E8D9DCB528B8ECA10035D5A5 /* ExpanseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9DCB428B8ECA10035D5A5 /* ExpanseTableViewCell.swift */; };
 		E8FB9CE328BF932400298313 /* ExtractItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB9CE228BF932400298313 /* ExtractItemTableViewCell.swift */; };
+		E8FB9CE628BFA15A00298313 /* AddExtractItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FB9CE528BFA15A00298313 /* AddExtractItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E8D9DCAE28B8E8A60035D5A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D9DCB428B8ECA10035D5A5 /* ExpanseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpanseTableViewCell.swift; sourceTree = "<group>"; };
 		E8FB9CE228BF932400298313 /* ExtractItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractItemTableViewCell.swift; sourceTree = "<group>"; };
+		E8FB9CE528BFA15A00298313 /* AddExtractItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExtractItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		E8D9DC9F28B8E8A40035D5A5 /* Expanses */ = {
 			isa = PBXGroup;
 			children = (
+				E8FB9CE428BFA12D00298313 /* AddExtractItem */,
 				E8AAFA7A28BE4A5C00F9FEDD /* ExtractDetail */,
 				E8AAFA7728BE46EA00F9FEDD /* Models */,
 				E8D9DCA028B8E8A40035D5A5 /* AppDelegate.swift */,
@@ -93,6 +96,14 @@
 				E8D9DCAE28B8E8A60035D5A5 /* Info.plist */,
 			);
 			path = Expanses;
+			sourceTree = "<group>";
+		};
+		E8FB9CE428BFA12D00298313 /* AddExtractItem */ = {
+			isa = PBXGroup;
+			children = (
+				E8FB9CE528BFA15A00298313 /* AddExtractItemViewController.swift */,
+			);
+			path = AddExtractItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 				E8D9DCB528B8ECA10035D5A5 /* ExpanseTableViewCell.swift in Sources */,
 				E8D9DCA528B8E8A40035D5A5 /* ViewController.swift in Sources */,
 				E8AAFA7C28BE4A8100F9FEDD /* ExtractDetailViewController.swift in Sources */,
+				E8FB9CE628BFA15A00298313 /* AddExtractItemViewController.swift in Sources */,
 				E8D9DCA128B8E8A40035D5A5 /* AppDelegate.swift in Sources */,
 				E8AAFA7928BE470F00F9FEDD /* ExtractItem.swift in Sources */,
 				E8FB9CE328BF932400298313 /* ExtractItemTableViewCell.swift in Sources */,
