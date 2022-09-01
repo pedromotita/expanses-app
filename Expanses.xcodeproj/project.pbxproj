@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E888A5AB28C0D8C5008A520C /* AddTransactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A5AA28C0D8C5008A520C /* AddTransactionTableViewController.swift */; };
 		E8AAFA7928BE470F00F9FEDD /* ExtractItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AAFA7828BE470F00F9FEDD /* ExtractItem.swift */; };
 		E8AAFA7C28BE4A8100F9FEDD /* ExtractDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AAFA7B28BE4A8100F9FEDD /* ExtractDetailViewController.swift */; };
 		E8D9DCA128B8E8A40035D5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9DCA028B8E8A40035D5A5 /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E888A5AA28C0D8C5008A520C /* AddTransactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionTableViewController.swift; sourceTree = "<group>"; };
 		E8AAFA7828BE470F00F9FEDD /* ExtractItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractItem.swift; sourceTree = "<group>"; };
 		E8AAFA7B28BE4A8100F9FEDD /* ExtractDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractDetailViewController.swift; sourceTree = "<group>"; };
 		E8D9DC9D28B8E8A40035D5A5 /* Expanses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expanses.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				E8FB9CE528BFA15A00298313 /* AddExtractItemViewController.swift */,
+				E888A5AA28C0D8C5008A520C /* AddTransactionTableViewController.swift */,
 			);
 			path = AddExtractItem;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				E8D9DCA528B8E8A40035D5A5 /* ViewController.swift in Sources */,
 				E8AAFA7C28BE4A8100F9FEDD /* ExtractDetailViewController.swift in Sources */,
 				E8FB9CE628BFA15A00298313 /* AddExtractItemViewController.swift in Sources */,
+				E888A5AB28C0D8C5008A520C /* AddTransactionTableViewController.swift in Sources */,
 				E8D9DCA128B8E8A40035D5A5 /* AppDelegate.swift in Sources */,
 				E8AAFA7928BE470F00F9FEDD /* ExtractItem.swift in Sources */,
 				E8FB9CE328BF932400298313 /* ExtractItemTableViewCell.swift in Sources */,

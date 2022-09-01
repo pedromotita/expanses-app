@@ -33,7 +33,7 @@ class ExtractDetailViewController: UIViewController {
     @objc
     private func openAddExtractItemModal() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let addExtractItemViewController = storyboard.instantiateViewController(withIdentifier: AddExtractItemViewController.identifier)
+        let addExtractItemViewController = storyboard.instantiateViewController(withIdentifier: AddTransactionTableViewController.identifier)
         
         addExtractItemViewController.modalPresentationStyle = .pageSheet
         addExtractItemViewController.modalTransitionStyle = .coverVertical
