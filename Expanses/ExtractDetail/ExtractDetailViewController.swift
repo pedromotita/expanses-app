@@ -38,7 +38,9 @@ class ExtractDetailViewController: UIViewController {
         addExtractItemViewController.modalPresentationStyle = .pageSheet
         addExtractItemViewController.modalTransitionStyle = .coverVertical
         
-        present(addExtractItemViewController, animated: true, completion: nil)
+        let navigationController = UINavigationController(rootViewController: addExtractItemViewController)
+        
+        present(navigationController, animated: true, completion: nil)
     }
 }
 
@@ -58,5 +60,9 @@ extension ExtractDetailViewController: UITableViewDataSource, UITableViewDelegat
         cell.configure(with: extractItem)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Latest Expanses"
     }
 }
