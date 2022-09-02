@@ -32,13 +32,13 @@ class ExtractDetailViewController: UIViewController {
     
     @objc
     private func openAddExtractItemModal() {
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let addExtractItemViewController = storyboard.instantiateViewController(withIdentifier: AddTransactionTableViewController.identifier)
+        let navigationController = UINavigationController(rootViewController: addExtractItemViewController)
         
         addExtractItemViewController.modalPresentationStyle = .pageSheet
         addExtractItemViewController.modalTransitionStyle = .coverVertical
-        
-        let navigationController = UINavigationController(rootViewController: addExtractItemViewController)
         
         present(navigationController, animated: true, completion: nil)
     }
@@ -52,7 +52,6 @@ extension ExtractDetailViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let extractItem = self.extractItems[indexPath.row]
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExtractTableViewCell") as? ExtractItemTableViewCell else {
             return UITableViewCell()
         }
