@@ -11,7 +11,7 @@ class ExtractDetailViewController: UIViewController {
 
     static let identifier = "ExtractDetailViewController"
     
-    private let extractItems = [
+    private var extractItems = [
         ExtractItem(title: "Lunch", value: 13.00, date: Date.now),
         ExtractItem(title: "ELD Store", value: -3.54, date: Date.now)
     ]
@@ -34,9 +34,13 @@ class ExtractDetailViewController: UIViewController {
     private func openAddExtractItemModal() {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let addExtractItemViewController = storyboard.instantiateViewController(withIdentifier: AddTransactionTableViewController.identifier)
+        guard let addExtractItemViewController = storyboard.instantiateViewController(withIdentifier: AddTransactionTableViewController.identifier) as? AddTransactionTableViewController else {
+            return
+        }
+        
         let navigationController = UINavigationController(rootViewController: addExtractItemViewController)
         
+        addExtractItemViewController.delegate = self
         addExtractItemViewController.modalPresentationStyle = .pageSheet
         addExtractItemViewController.modalTransitionStyle = .coverVertical
         
@@ -63,5 +67,12 @@ extension ExtractDetailViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Latest Expanses"
+    }
+}
+
+extension ExtractDetailViewController: AddTransactionDelegate {
+    func didAdd(_ transaction: ExtractItem) {
+        self.extractItems.append(transaction)
+        self.tableView.reloadData()
     }
 }

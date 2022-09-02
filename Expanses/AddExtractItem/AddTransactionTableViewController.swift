@@ -30,7 +30,7 @@ class AddTransactionTableViewController: UITableViewController {
     
     @objc
     private func addTransaction() {
-        print(self.transaction)
+        self.delegate?.didAdd(self.transaction)
         self.dismiss(animated: true)
     }
     
@@ -52,8 +52,6 @@ class AddTransactionTableViewController: UITableViewController {
 }
 
 protocol AddTransactionDelegate: AnyObject {
-    
     func didAdd(_ transaction: ExtractItem)
-    
 }
 
