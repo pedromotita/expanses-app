@@ -8,21 +8,35 @@
 import UIKit
 
 class ExpanseTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var label: UILabel!
     
-    static let identifier = "ExpanseTableViewCell"
+    static let reuseIdentifier = "ExpanseTableViewCell"
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    private var label = UILabel()
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configureLabel()
     }
     
-    public func configure(with name: String) {
-        self.label.text = name
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
+    
+    public func configure(with title: String) {
+        self.label.text = title
+    }
+    
+    private func configureLabel() {
+        addSubview(label)
+        
+        label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.font = UIFont.preferredFont(forTextStyle: .body)
+        label.adjustsFontForContentSizeCategory = true
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
+        label.heightAnchor.constraint(equalToConstant: 80).isActive = true
+    }
 }

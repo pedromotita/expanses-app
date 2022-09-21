@@ -8,36 +8,45 @@
 import UIKit
 
 class ExpanseListViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
     
-    private var months: [String] = ["January", "February", "March"]
+    private var tableView = UITableView(frame: .zero, style: .insetGrouped)
+    private let months = ["January", "February", "March"]
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        title = "Expanses"
+        configureTableView()
+    }
+    
+    private func configureTableView() {
+        view.addSubview(tableView)
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(ExpanseTableViewCell.self, forCellReuseIdentifier: ExpanseTableViewCell.reuseIdentifier)
         
-        self.title = "Expanses"
+        tableView.rowHeight = 43.5
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 }
 
-extension ExpanseListViewController: UITableViewDataSource, UITableViewDelegate {
-    
+extension ExpanseListViewController: UITableViewDelegate, UITableViewDataSource {
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.months.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let month = self.months[indexPath.row]
-        
-        if let cell = tableView.dequeueReusableCell(withIdentifier: ExpanseTableViewCell.identifier) as? ExpanseTableViewCell {
-            cell.configure(with: month)
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ExpanseTableViewCell.reuseIdentifier) as? ExpanseTableViewCell else {
+            return UITableViewCell()
         }
-        return UITableViewCell()
+        let month = months[indexPath.row]
+        cell.configure(with: month)
+        
+        return cell
     }
-    
 }
-
